@@ -1,6 +1,6 @@
 import '../css/style.css';
 import * as searchView from './view/searchView';
-import { elements } from './view/base';
+import { elements, renderLoader } from './view/base';
 import Search from './models/Search';
 
 const state = {};
@@ -11,6 +11,7 @@ const searchController = async () => {
     await state.search.getRecipes();
     searchView.clearInput();
     searchView.clearSearch();
+    renderLoader();
     searchView.getRecipes(state.search.recipes);
   }
 };
