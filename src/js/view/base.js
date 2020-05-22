@@ -5,14 +5,24 @@ export const elements = {
   searchRes: document.querySelector('.results'),
   results__list: document.querySelector('.results__list'),
 };
+const elementString = {
+  loader: 'loader',
+};
 
 export const renderLoader = () => {
   const loader = `
-    <div class="loader">
+    <div class="${elementString.loader}">
     <svg>
     <use href="../img/icons.svg#icon-cw"></use>
     </svg>
     </div>
   `;
   elements.searchRes.insertAdjacentHTML('afterbegin', loader);
+};
+
+export const clearLoader = () => {
+  const loader = document.querySelector(`.${elementString.loader}`);
+  if (loader) {
+    loader.parentElement.removeChild(loader);
+  }
 };

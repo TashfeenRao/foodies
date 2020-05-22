@@ -37,6 +37,6 @@ const renderRecipe = recipe => {
   `;
   elements.results__list.insertAdjacentHTML('beforeend', li);
 };
-export const getRecipes = recipes => {
+export const displayRecipes = recipes => {
   recipes.forEach(renderRecipe);
 };
