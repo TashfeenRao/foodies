@@ -23,5 +23,6 @@
       "database": "talently",
       "username": "root"
     }
-  ]
+  ],
+  "sqltools.autoOpenSessionFiles": false
 }
